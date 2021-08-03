@@ -94,7 +94,7 @@ public struct Oanda {
 	/// - Parameters:
 	///   - id: The id of the account
 	///   - demo: If the account is a practice one set true
-	init(with id: AccountID, is demo: Bool) {
+	public init(with id: AccountID, is demo: Bool) {
 		account = id
 		if demo {
 			restSpace = .init(host: restPractice, port: 443, protocol: "https", realm: nil, authenticationMethod: NSURLAuthenticationMethodDefault)
